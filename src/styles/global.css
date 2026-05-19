@@ -118,20 +118,33 @@ button { font: inherit; background: none; border: none; color: inherit; }
 .navbar {
   position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
   padding: 18px var(--pad-x);
-  background: linear-gradient(to bottom, rgba(28, 22, 18, 0.55), rgba(28, 22, 18, 0));
+  background: linear-gradient(to bottom, rgba(28, 22, 18, 0.85) 0%, rgba(28, 22, 18, 0.55) 60%, rgba(28, 22, 18, 0) 100%);
   color: #faf2e3;
   transition: background 0.4s ease, padding 0.3s ease, backdrop-filter 0.4s ease;
 }
 .navbar--scrolled {
-  background: rgba(28, 22, 18, 0.88);
+  background: rgba(28, 22, 18, 0.92);
   backdrop-filter: saturate(160%) blur(14px);
   -webkit-backdrop-filter: saturate(160%) blur(14px);
   padding: 12px var(--pad-x);
   border-bottom: 1px solid rgba(245, 230, 205, 0.10);
 }
-.navbar .brand-mark__word { color: #faf2e3; }
-.navbar__link { color: rgba(250, 242, 227, 0.72); }
-.navbar__link:hover, .navbar__link.is-active { color: #faf2e3; }
+.navbar .brand-mark__word {
+  color: #faf2e3;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+}
+.navbar__link {
+  color: #faf2e3;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
+  opacity: 0.96;
+}
+.navbar__link:hover, .navbar__link.is-active {
+  color: #fff;
+  opacity: 1;
+}
+.navbar__link::after { background: var(--c-accent-soft); height: 2px; }
 .navbar__inner {
   max-width: var(--container); margin: 0 auto;
   display: flex; align-items: center; justify-content: space-between; gap: 32px;
