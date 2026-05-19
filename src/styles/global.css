@@ -1189,16 +1189,22 @@ button { font: inherit; background: none; border: none; color: inherit; }
 }
 .navbar__links { display: flex; gap: 32px; }
 .navbar__link {
-  font-size: 14px; font-weight: 500; letter-spacing: 0.04em;
-  text-transform: uppercase; color: var(--c-text-soft); position: relative; padding: 8px 0;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #faf2e3;                /* cream sólido — el navbar SIEMPRE es dark */
+  position: relative;
+  padding: 8px 0;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.55);
 }
 .navbar__link::after {
   content: ''; position: absolute; left: 0; right: 0; bottom: 0;
-  height: 1px; background: var(--c-accent);
+  height: 2px; background: var(--c-accent-soft);
   transform: scaleX(0); transform-origin: left;
   transition: transform 0.4s cubic-bezier(0.76, 0, 0.24, 1);
 }
-.navbar__link:hover, .navbar__link.is-active { color: var(--c-text); }
+.navbar__link:hover, .navbar__link.is-active { color: #ffffff; }
 .navbar__link:hover::after, .navbar__link.is-active::after { transform: scaleX(1); }
 .navbar__cta { display: block; }
 .navbar__burger {
