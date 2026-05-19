@@ -43,7 +43,7 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.95, delay: 0.1, ease: EASINGS.premium }}
           >
-            La carne
+            Acá la carne
           </motion.span>
           <motion.span
             className="hero2__title-line"
@@ -51,7 +51,7 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.95, delay: 0.3, ease: EASINGS.premium }}
           >
-            se <span className="hero2__word-accent">respeta.</span>
+            no se <span className="hero2__word-accent">cocina.</span>
           </motion.span>
           <motion.span
             className="hero2__title-line"
@@ -59,7 +59,7 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.95, delay: 0.5, ease: EASINGS.premium }}
           >
-            Y se come <span className="hero2__word-accent">despacio.</span>
+            Se <span className="hero2__word-accent">cuida.</span>
           </motion.span>
         </h1>
 
