@@ -97,8 +97,8 @@ export default function StepDetails({ details, onChange, onBack, onSubmit, canSu
         </div>
 
         <p className="rsv-form__fineprint">
-          Al confirmar abrimos WhatsApp con tu reserva pre-llenada para
-          <strong> Diezton SRL.</strong> — confirmación humana en pocos minutos.
+          Al confirmar abrimos WhatsApp con tu reserva pre-llenada.
+          <strong> Confirmación humana</strong> en pocos minutos — sin esperas.
         </p>
       </form>
     </div>

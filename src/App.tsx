@@ -26,7 +26,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/menu" element={<MenuIndex />} />
           <Route path="/menu/:slug" element={<CategoryPage />} />
-          {/* Ruta única de reservas — operada por Diezton SRL. */}
+          {/* Ruta única de reservas */}
           <Route path="/reservations" element={<ReservationsPage />} />
           <Route path="/reservaciones" element={<ReservationsPage />} />
           <Route path="/eventos" element={<Eventos />} />

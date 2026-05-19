@@ -24,7 +24,7 @@ function buildMessage(opts: {
   zone: Zone; date: Date; time: string; details: DetailsState;
 }) {
   const lines = [
-    '🍽️ *Nueva Reserva - Diezton SRL.*',
+    '🍽️ *Nueva reserva — Turo Steakhouse*',
     `📍 Zona: ${opts.zone}`,
     `📅 Fecha: ${formatDateForMsg(opts.date)}`,
     `🕐 Hora: ${opts.time}`,
@@ -80,8 +80,8 @@ export default function ReservationsPage() {
             <img src="/assets/img/logo.png" alt="" />
           </span>
           <span className="rsv-page__brand-stack">
-            <span className="rsv-page__brand-word">DIEZTON SRL.</span>
-            <span className="rsv-page__brand-sub">Reservaciones · operado por Turo</span>
+            <span className="rsv-page__brand-word">TURO</span>
+            <span className="rsv-page__brand-sub">Reservar mesa</span>
           </span>
         </Link>
 
@@ -174,10 +174,11 @@ export default function ReservationsPage() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.4 }}
         >
-          <span className="rsv-page__aside-eyebrow">Sobre Diezton SRL.</span>
+          <span className="rsv-page__aside-eyebrow">Cómo funciona</span>
           <p className="rsv-page__aside-text">
-            Diezton SRL. opera las reservas de Turo Steakhouse. Confirmamos cada
-            mesa por WhatsApp con confirmación humana, sin call centers ni esperas.
+            Reservás en tres pasos y confirmamos por WhatsApp en minutos — con
+            confirmación humana, sin call centers ni esperas. La mesa queda firme
+            apenas respondemos.
           </p>
           <dl className="rsv-page__aside-meta">
             <div>
@@ -185,8 +186,8 @@ export default function ReservationsPage() {
               <dd>+1 (829) 523-4738</dd>
             </div>
             <div>
-              <dt>Restaurante</dt>
-              <dd>Turo · Piantini, Santo Domingo</dd>
+              <dt>Dirección</dt>
+              <dd>Andrés Julio Aybar 25 · Piantini</dd>
             </div>
           </dl>
         </motion.aside>
