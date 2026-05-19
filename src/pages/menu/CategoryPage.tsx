@@ -40,20 +40,25 @@ export default function CategoryPage() {
 
   return (
     <article className="category">
-      {/* Portada — logo de Turo sobre brasa cobre animada (fotos reales pendientes) */}
+      {/* Portada — video de fondo (vertical, recortado a horizontal) + glows cobre */}
       <section className="category__cover category__cover--logo">
         <motion.div className="category__video-wrap" style={{ scale: videoScale }}>
+          <video
+            className="category__cover-video"
+            src="/assets/videos/category-bg.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            aria-hidden="true"
+          />
           <div className="category__cover-brasa" aria-hidden="true">
             <span className="category__cover-glow category__cover-glow--1" />
             <span className="category__cover-glow category__cover-glow--2" />
             <span className="category__cover-glow category__cover-glow--3" />
           </div>
-          <img
-            className="category__cover-logo"
-            src="/assets/img/logo.png"
-            alt=""
-            aria-hidden="true"
-          />
+          <div className="category__cover-vignette" aria-hidden="true" />
           <div className="category__cover-grain" aria-hidden="true" />
         </motion.div>
 

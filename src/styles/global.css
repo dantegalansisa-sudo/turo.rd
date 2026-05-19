@@ -261,7 +261,7 @@ button { font: inherit; background: none; border: none; color: inherit; }
   opacity: 0.45;
 }
 
-/* Cover SIN foto — logo Turo sobre brasa cobre animada */
+/* Cover de categoría — video vertical recortado + glows cobre + vignette */
 .category__cover--logo {
   background: linear-gradient(180deg, #1c1612, #2a1c10 60%, #1c1612);
   color: #faf2e3;
@@ -271,19 +271,46 @@ button { font: inherit; background: none; border: none; color: inherit; }
   --c-accent: #d49058;
 }
 .category__cover--logo .category__video-wrap {
-  display: flex; align-items: center; justify-content: center;
-  background: transparent;
+  position: absolute; inset: 0;
+  overflow: hidden;
+  background: #1c1612;
+}
+.category__cover-video {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;            /* el video vertical se recorta a horizontal */
+  object-position: center center;
+  z-index: 0;
+  filter: brightness(0.75) contrast(1.05) saturate(1.05);
+}
+.category__cover-vignette {
+  position: absolute; inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(100deg,
+      rgba(28, 22, 18, 0.85) 0%,
+      rgba(28, 22, 18, 0.55) 35%,
+      rgba(28, 22, 18, 0.35) 60%,
+      rgba(28, 22, 18, 0.75) 100%),
+    linear-gradient(to bottom,
+      transparent 0%,
+      transparent 55%,
+      rgba(28, 22, 18, 0.65) 90%,
+      var(--c-bg) 100%);
 }
 .category__cover-brasa {
   position: absolute; inset: 0;
   pointer-events: none;
   overflow: hidden;
+  z-index: 1;
+  mix-blend-mode: screen;
 }
 .category__cover-glow {
   position: absolute;
   border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.55;
+  filter: blur(90px);
+  opacity: 0.35;
   animation: brasaFlicker 6s ease-in-out infinite;
 }
 .category__cover-glow--1 {
