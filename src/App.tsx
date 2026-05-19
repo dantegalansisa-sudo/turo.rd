@@ -8,7 +8,6 @@ import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import MenuIndex from './pages/MenuIndex';
 import CategoryPage from './pages/menu/CategoryPage';
-import Reservaciones from './pages/Reservaciones';
 import ReservationsPage from './pages/ReservationsPage';
 import Eventos from './pages/Eventos';
 import NotFound from './pages/NotFound';
@@ -27,14 +26,15 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/menu" element={<MenuIndex />} />
           <Route path="/menu/:slug" element={<CategoryPage />} />
-          <Route path="/reservaciones" element={<Reservaciones />} />
+          {/* Ruta única de reservas — operada por Diezton SRL. */}
           <Route path="/reservations" element={<ReservationsPage />} />
+          <Route path="/reservaciones" element={<ReservationsPage />} />
           <Route path="/eventos" element={<Eventos />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
       {!isStandalone && <Footer />}
-      <WhatsAppFab />
+      {!isStandalone && <WhatsAppFab />}
     </>
   );
 }

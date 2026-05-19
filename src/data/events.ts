@@ -28,7 +28,7 @@ export const CURRENT_EVENT: Event = {
   time: '8:00 PM',
   artist: 'Bodega Catena Zapata',
   artistRole: 'Cinco tiempos · cinco copas',
-  flyer: '/assets/img/carne11.png',
+  flyer: '/assets/img/logo.png',
   status: 'tonight',
   sponsor: 'Catena Zapata',
 };
@@ -44,7 +44,7 @@ export const UPCOMING_EVENTS: Event[] = [
     dateLabel: 'Viernes 29 de Mayo',
     time: '8:00 PM',
     artistRole: 'Cortes madurados 30 / 45 / 60 días',
-    flyer: '/assets/img/carne1.png',
+    flyer: '/assets/img/logo.png',
     status: 'upcoming',
   },
   {
@@ -54,7 +54,7 @@ export const UPCOMING_EVENTS: Event[] = [
     dateLabel: 'Cada sábado & domingo',
     time: '10:00 AM – 1:00 PM',
     artistRole: 'Mimosas, Steak & Eggs, Raw Bar',
-    flyer: '/assets/img/food.png',
+    flyer: '/assets/img/logo.png',
     status: 'upcoming',
   },
 ];

@@ -2,12 +2,11 @@ import { useEffect, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import MagneticButton from './MagneticButton';
-import { SITE } from '../data/menu';
 
 const LINKS = [
   { to: '/menu', label: 'Menú' },
   { to: '/eventos', label: 'Experiencias' },
-  { to: '/reservaciones', label: 'Reservar' },
+  { to: '/reservations', label: 'Reservar' },
 ];
 
 export default function Navbar() {
@@ -43,8 +42,8 @@ export default function Navbar() {
         </nav>
 
         <div className="navbar__cta">
-          <MagneticButton href={SITE.whatsappLink} target="_blank" rel="noopener" className="btn btn--ghost btn--sm">
-            Reservar
+          <MagneticButton href="/reservations" className="btn btn--primary btn--sm">
+            Reservar mesa
           </MagneticButton>
         </div>
 
@@ -67,8 +66,8 @@ export default function Navbar() {
               <NavLink to="/">Inicio</NavLink>
               {LINKS.map(l => <NavLink key={l.to} to={l.to}>{l.label}</NavLink>)}
             </div>
-            <a href={SITE.whatsappLink} target="_blank" rel="noopener" className="btn btn--primary btn--block">
-              Reservar por WhatsApp
+            <a href="/reservations" className="btn btn--primary btn--block">
+              Reservar mesa
             </a>
           </motion.div>
         )}

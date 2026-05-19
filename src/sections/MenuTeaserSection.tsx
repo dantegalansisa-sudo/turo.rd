@@ -5,15 +5,6 @@ import MagneticButton from '../components/MagneticButton';
 import { MENU } from '../data/menu';
 import { containerVariants, cardVariants } from '../utils/motionVariants';
 
-const CATEGORY_IMAGES: Record<string, string> = {
-  'crudos-entradas': '/assets/img/food87.png',
-  'josper-grill': '/assets/img/carne.png',
-  'pescados-mariscos': '/assets/img/food55.png',
-  'pastas-arroces': '/assets/img/food.png',
-  'ensaladas-sopas': '/assets/img/food12.png',
-  'brunch': '/assets/img/postre.png',
-};
-
 const CATEGORY_COUNTS: Record<string, string> = {
   'crudos-entradas': '25+ platos',
   'josper-grill': '30+ cortes',
@@ -35,16 +26,19 @@ export default function MenuTeaserSection() {
         <div className="menu-teaser__head-left">
           <span className="section__label">02 — La Carta</span>
           <RevealText tag="h2" className="section__title">
-            Seis maneras de
+            La carta
           </RevealText>
-          <RevealText tag="h2" className="section__title section__title--italic" delay={0.15}>
-            entrar al fuego.
+          <RevealText tag="h2" className="section__title section__title--italic" delay={0.12}>
+            no es un menú.
+          </RevealText>
+          <RevealText tag="h2" className="section__title" delay={0.24}>
+            Es un mapa.
           </RevealText>
         </div>
         <div className="menu-teaser__head-right">
           <p className="menu-teaser__lead">
-            Desde la frescura del raw bar hasta los cortes premium al Josper.
-            Cada categoría es una manera distinta de vivir Turo — empezá por donde te llame.
+            Desde el filo del raw bar hasta la brasa del Josper. Seis territorios,
+            una sola noche — empezá por el que te llame y dejá que la mesa decida el resto.
           </p>
           <div className="menu-teaser__meta">
             <div>
@@ -70,9 +64,9 @@ export default function MenuTeaserSection() {
         {MENU.map((cat, i) => (
           <motion.article key={cat.slug} className="menu-teaser__card card" variants={cardVariants}>
             <Link to={`/menu/${cat.slug}`} className="menu-teaser__link">
-              <div className="menu-teaser__media">
-                <img src={CATEGORY_IMAGES[cat.slug] ?? '/assets/img/carne.png'} alt={cat.title} loading="lazy" />
-                <div className="menu-teaser__media-overlay" />
+              <div className="menu-teaser__media menu-teaser__media--logo">
+                <img src="/assets/img/logo.png" alt="" loading="lazy" />
+                <span className="menu-teaser__media-soon">Foto próximamente</span>
                 <span className="menu-teaser__count">{CATEGORY_COUNTS[cat.slug]}</span>
               </div>
               <div className="menu-teaser__body">

@@ -2,7 +2,7 @@ import { useParams, Link, Navigate } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import RevealText from '../../components/RevealText';
 import MagneticButton from '../../components/MagneticButton';
-import { MENU, type Dish, SITE } from '../../data/menu';
+import { MENU, type Dish } from '../../data/menu';
 import { containerVariants, cardVariants } from '../../utils/motionVariants';
 import { EASINGS } from '../../utils/easings';
 
@@ -40,15 +40,20 @@ export default function CategoryPage() {
 
   return (
     <article className="category">
-      {/* Portada con imagen + brasa animada */}
-      <section className="category__cover">
+      {/* Portada — logo de Turo sobre brasa cobre animada (fotos reales pendientes) */}
+      <section className="category__cover category__cover--logo">
         <motion.div className="category__video-wrap" style={{ scale: videoScale }}>
+          <div className="category__cover-brasa" aria-hidden="true">
+            <span className="category__cover-glow category__cover-glow--1" />
+            <span className="category__cover-glow category__cover-glow--2" />
+            <span className="category__cover-glow category__cover-glow--3" />
+          </div>
           <img
-            className="category__video"
-            src={cat.poster ?? '/assets/img/heros.jpg'}
+            className="category__cover-logo"
+            src="/assets/img/logo.png"
             alt=""
+            aria-hidden="true"
           />
-          <div className="category__video-overlay" />
           <div className="category__cover-grain" aria-hidden="true" />
         </motion.div>
 
@@ -108,10 +113,8 @@ export default function CategoryPage() {
           ¿Listos para vivirlo en mesa?
         </RevealText>
         <div className="category__cta-buttons">
-          <MagneticButton href="/reservaciones" className="btn btn--primary">Reservar mesa</MagneticButton>
-          <MagneticButton href={SITE.whatsappLink} target="_blank" rel="noopener" className="btn btn--ghost">
-            WhatsApp directo
-          </MagneticButton>
+          <MagneticButton href="/reservations" className="btn btn--primary">Reservar mesa</MagneticButton>
+          <Link to="/menu" className="btn btn--ghost">Volver al menú</Link>
         </div>
       </section>
 

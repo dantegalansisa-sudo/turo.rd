@@ -39,13 +39,17 @@ export default function GallerySection() {
       <div className="section__head">
         <span className="section__label">05 — El espacio</span>
         <RevealText tag="h2" className="section__title">
-          Hecho a mano,
+          Madera, cuero,
         </RevealText>
-        <RevealText tag="h2" className="section__title section__title--italic" delay={0.15}>
-          servido con calma.
+        <RevealText tag="h2" className="section__title section__title--italic" delay={0.12}>
+          brasa cercana.
+        </RevealText>
+        <RevealText tag="h2" className="section__title" delay={0.24}>
+          Ningún apuro.
         </RevealText>
         <p className="section__lead">
-          Madera, cuero, luz tibia. Turo está pensado para quedarse — y para volver.
+          Turo no se diseñó para impresionar. Se diseñó para quedarse — y para volver
+          al miércoles siguiente sin tener que celebrar nada.
         </p>
       </div>
 

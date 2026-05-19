@@ -4,28 +4,20 @@ import RevealText from '../components/RevealText';
 import { MENU } from '../data/menu';
 import { containerVariants, cardVariants } from '../utils/motionVariants';
 
-const COVERS: Record<string, string> = {
-  'crudos-entradas': '/assets/img/food87.png',
-  'josper-grill': '/assets/img/carne.png',
-  'pescados-mariscos': '/assets/img/food55.png',
-  'pastas-arroces': '/assets/img/food.png',
-  'ensaladas-sopas': '/assets/img/food12.png',
-  'brunch': '/assets/img/postre.png',
-};
-
 export default function MenuIndex() {
   return (
     <article className="page page--menu-index">
       <header className="page__head">
-        <span className="section__label">Nuestro Menú</span>
+        <span className="section__label">Nuestra Carta</span>
         <RevealText tag="h1" className="page__title">
-          Seis mundos.
+          Una carta
         </RevealText>
         <RevealText tag="h1" className="page__title page__title--italic" delay={0.15}>
-          Una misma brasa.
+          escrita con humo.
         </RevealText>
         <p className="page__lead">
-          Cada categoría es una manera distinta de vivir Turo. Elegí por dónde empezar.
+          Crudos, brasa, mar y horno — cada categoría es una manera de empezar la velada.
+          Las fotos reales llegan pronto; por ahora dejamos que los nombres hablen.
         </p>
       </header>
 
@@ -39,8 +31,9 @@ export default function MenuIndex() {
         {MENU.map((cat, i) => (
           <motion.div key={cat.slug} className="menu-index__card card" variants={cardVariants}>
             <Link to={`/menu/${cat.slug}`}>
-              <div className="menu-index__media">
-                <img src={COVERS[cat.slug] ?? '/assets/img/carne.png'} alt={cat.title} loading="lazy" />
+              <div className="menu-index__media menu-index__media--logo">
+                <img src="/assets/img/logo.png" alt="" loading="lazy" />
+                <span className="menu-index__media-soon">Foto próximamente</span>
               </div>
               <div className="menu-index__body">
                 <span className="menu-index__num">0{i + 1}</span>

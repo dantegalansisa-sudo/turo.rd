@@ -12,13 +12,17 @@ export default function VisitSection() {
       <div className="visit__head">
         <span className="section__label">07 — Visítanos</span>
         <RevealText tag="h2" className="section__title">
-          Reservá. Manejá.
+          Andrés Julio Aybar 25.
         </RevealText>
-        <RevealText tag="h2" className="section__title section__title--italic" delay={0.15}>
-          Nos vemos en Piantini.
+        <RevealText tag="h2" className="section__title section__title--italic" delay={0.12}>
+          Nos vemos
+        </RevealText>
+        <RevealText tag="h2" className="section__title" delay={0.24}>
+          cuando llegues.
         </RevealText>
         <p className="section__lead">
-          Calle Andrés Julio Aybar #25 — Piantini. Salón climatizado, terraza y valet parking.
+          Piantini — corazón gastronómico de Santo Domingo. Salón climatizado,
+          terraza al fresco, valet parking. El resto, lo hablamos en la mesa.
         </p>
       </div>
 
@@ -89,7 +93,7 @@ export default function VisitSection() {
                 <a href={SITE.whatsappLink} target="_blank" rel="noopener">WhatsApp directo</a>
               </p>
               <div className="visit-card__ctas">
-                <MagneticButton href="/reservaciones" className="btn btn--primary btn--sm">
+                <MagneticButton href="/reservations" className="btn btn--primary btn--sm">
                   Reservar mesa
                 </MagneticButton>
               </div>

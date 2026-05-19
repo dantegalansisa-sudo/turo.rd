@@ -4,39 +4,62 @@
    ─────────────────────────────────────────────── */
 
 :root {
-  /* Paleta — Turo: cálida, abierta, con dramatismo en los héros */
-  --c-bg: #1c1612;          /* marrón profundo cálido — ya no negro */
-  --c-bg-2: #251c16;
-  --c-bg-3: #2e231c;
+  /* Paleta CLARA por defecto — cream Turo */
+  --c-bg: #f6ecd6;           /* cream cálido, base luminosa */
+  --c-bg-2: #fbf4e3;         /* casi blanco crema */
+  --c-bg-3: #ffffff;          /* superficie blanca para cards */
+  --c-surface: #ffffff;
+  --c-line: rgba(58, 36, 20, 0.10);
+  --c-line-strong: rgba(58, 36, 20, 0.20);
+  --c-text: #2a1c10;          /* marrón profundo cálido para texto */
+  --c-text-soft: rgba(42, 28, 16, 0.72);
+  --c-text-mute: rgba(42, 28, 16, 0.50);
+  --c-accent: #a8612b;        /* cobre Turo, más saturado para contraste sobre cream */
+  --c-accent-soft: #c98a45;
+  --c-accent-deep: #7d4520;
+  --c-cream: #f6ecd6;
+  --c-cream-2: #fbf4e3;
+  --c-danger: #c44a2a;
+  --nx-cursor-color: #a8612b;
+}
+
+/* Modo oscuro — aplicado a secciones de drama (héros, chef, eventos, reservas) */
+.theme-dark,
+.hero2,
+.section--chef,
+.chef-block,
+.section--events,
+.rsv-page,
+.eventos__hero,
+.featured-event {
+  --c-bg: #1c1612;
+  --c-bg-2: #241b15;
+  --c-bg-3: #2d231c;
   --c-surface: #34281f;
   --c-line: rgba(245, 230, 205, 0.10);
   --c-line-strong: rgba(245, 230, 205, 0.22);
   --c-text: #faf2e3;
   --c-text-soft: rgba(250, 242, 227, 0.84);
   --c-text-mute: rgba(250, 242, 227, 0.60);
-  --c-accent: #c98a45;          /* cobre Turo elevado un punto */
-  --c-accent-soft: #e2a967;
-  --c-accent-deep: #9c6a30;
-  --c-cream: #f5ede1;
-  --c-cream-2: #ebe0cd;
-  --c-danger: #c44a2a;
-  --nx-cursor-color: #c98a45;
+  --c-accent: #d49058;
+  --c-accent-soft: #e6a978;
+  --c-cream: #faf2e3;
+  --c-cream-2: #f1e6cd;
+  --nx-cursor-color: #d49058;
+}
 
-  /* Tipografía */
+/* Tipografía + spacing + shadows globales */
+:root {
   --f-display: 'Cormorant Garamond', 'Times New Roman', serif;
   --f-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-
-  /* Espaciado / radios */
   --r-sm: 8px;
   --r-md: 16px;
   --r-lg: 24px;
   --r-xl: 36px;
   --container: 1280px;
   --pad-x: clamp(20px, 5vw, 80px);
-
-  /* Sombras */
-  --shadow-soft: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
-  --shadow-strong: 0 30px 80px -20px rgba(0, 0, 0, 0.7);
+  --shadow-soft: 0 10px 40px -10px rgba(58, 36, 20, 0.12);
+  --shadow-strong: 0 30px 80px -20px rgba(58, 36, 20, 0.22);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -95,16 +118,20 @@ button { font: inherit; background: none; border: none; color: inherit; }
 .navbar {
   position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
   padding: 18px var(--pad-x);
-  background: linear-gradient(to bottom, rgba(10,10,10,0.7), rgba(10,10,10,0));
+  background: linear-gradient(to bottom, rgba(28, 22, 18, 0.55), rgba(28, 22, 18, 0));
+  color: #faf2e3;
   transition: background 0.4s ease, padding 0.3s ease, backdrop-filter 0.4s ease;
 }
 .navbar--scrolled {
-  background: rgba(10, 10, 10, 0.85);
+  background: rgba(28, 22, 18, 0.88);
   backdrop-filter: saturate(160%) blur(14px);
   -webkit-backdrop-filter: saturate(160%) blur(14px);
   padding: 12px var(--pad-x);
-  border-bottom: 1px solid var(--c-line);
+  border-bottom: 1px solid rgba(245, 230, 205, 0.10);
 }
+.navbar .brand-mark__word { color: #faf2e3; }
+.navbar__link { color: rgba(250, 242, 227, 0.72); }
+.navbar__link:hover, .navbar__link.is-active { color: #faf2e3; }
 .navbar__inner {
   max-width: var(--container); margin: 0 auto;
   display: flex; align-items: center; justify-content: space-between; gap: 32px;
@@ -151,9 +178,23 @@ button { font: inherit; background: none; border: none; color: inherit; }
 .brand-mark--footer .brand-mark__word { font-size: 28px; }
 .navbar--scrolled .brand-mark__icon { width: 38px; height: 38px; }
 
-/* Dish placeholder con logo + "Foto próximamente" */
+/* ───────────────────────────────────────────────
+   LOGO PLACEHOLDERS (categorías, platos, chef, eventos)
+   El logo de Turo sobre fondo cobre cálido + "Foto próximamente"
+   ─────────────────────────────────────────────── */
+.dish__media--logo,
+.menu-teaser__media--logo,
+.menu-index__media--logo {
+  background:
+    radial-gradient(circle at 50% 45%, rgba(168, 97, 43, 0.22), transparent 60%),
+    linear-gradient(155deg, #2a1c10 0%, #1c1612 100%);
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+}
 .dish__media--logo {
-  background: linear-gradient(155deg, var(--c-bg-3), var(--c-bg-2));
+  background:
+    radial-gradient(circle at 50% 45%, rgba(168, 97, 43, 0.22), transparent 60%),
+    linear-gradient(155deg, #2a1c10 0%, #1c1612 100%);
   display: flex; align-items: center; justify-content: center;
   position: relative;
 }
@@ -165,25 +206,117 @@ button { font: inherit; background: none; border: none; color: inherit; }
   transition: transform 0.6s cubic-bezier(0.76, 0, 0.24, 1), opacity 0.4s ease;
 }
 .dish:hover .dish__media--logo img { transform: scale(1.04); opacity: 1; }
-.dish__media-soon {
-  position: absolute; bottom: 12px; left: 50%;
+.dish__media-soon,
+.menu-teaser__media-soon,
+.menu-index__media-soon,
+.chef__image-soon {
+  position: absolute; bottom: 14px; left: 50%;
   transform: translateX(-50%);
-  font-size: 9.5px; letter-spacing: 0.22em; text-transform: uppercase;
-  color: var(--c-text-mute);
-  background: rgba(28, 22, 18, 0.55);
-  padding: 5px 11px; border-radius: 999px;
-  border: 1px solid rgba(245, 230, 205, 0.08);
-  backdrop-filter: blur(4px);
+  font-size: 9.5px; letter-spacing: 0.24em; text-transform: uppercase;
+  color: rgba(250, 242, 227, 0.78);
+  background: rgba(28, 22, 18, 0.5);
+  padding: 6px 12px; border-radius: 999px;
+  border: 1px solid rgba(212, 144, 88, 0.30);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  white-space: nowrap;
+}
+.menu-teaser__media--logo img,
+.menu-index__media--logo img {
+  width: 52%; height: auto; max-height: 60%;
+  object-fit: contain;
+  opacity: 0.92;
+  filter: drop-shadow(0 12px 32px rgba(0,0,0,0.45));
+  transition: transform 0.7s cubic-bezier(0.76, 0, 0.24, 1);
+}
+.menu-teaser__card:hover .menu-teaser__media--logo img,
+.menu-index__card:hover .menu-index__media--logo img {
+  transform: scale(1.05);
+}
+
+/* Chef section — logo en vez de carne.png */
+.chef__image-wrap--logo {
+  background:
+    radial-gradient(circle at 50% 40%, rgba(168, 97, 43, 0.28), transparent 65%),
+    linear-gradient(155deg, #2a1c10, #1c1612);
+  display: flex; align-items: center; justify-content: center;
+  padding: 14% 12%;
+  position: relative;
+}
+.chef__image--logo {
+  width: 70% !important;
+  height: auto !important;
+  object-fit: contain !important;
+  opacity: 0.92;
+  filter: drop-shadow(0 18px 40px rgba(0,0,0,0.45));
 }
 
 /* Cover de categoría — sin video, foto + grain */
 .category__cover-grain {
   position: absolute; inset: 0; pointer-events: none;
   background:
-    radial-gradient(ellipse at 30% 60%, rgba(201, 138, 69, 0.12), transparent 55%),
+    radial-gradient(ellipse at 30% 60%, rgba(212, 144, 88, 0.10), transparent 55%),
     repeating-linear-gradient(45deg, transparent 0 2px, rgba(0,0,0,0.04) 2px 3px);
   mix-blend-mode: overlay;
   opacity: 0.45;
+}
+
+/* Cover SIN foto — logo Turo sobre brasa cobre animada */
+.category__cover--logo {
+  background: linear-gradient(180deg, #1c1612, #2a1c10 60%, #1c1612);
+  color: #faf2e3;
+  --c-text: #faf2e3;
+  --c-text-soft: rgba(250, 242, 227, 0.84);
+  --c-text-mute: rgba(250, 242, 227, 0.60);
+  --c-accent: #d49058;
+}
+.category__cover--logo .category__video-wrap {
+  display: flex; align-items: center; justify-content: center;
+  background: transparent;
+}
+.category__cover-brasa {
+  position: absolute; inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.category__cover-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.55;
+  animation: brasaFlicker 6s ease-in-out infinite;
+}
+.category__cover-glow--1 {
+  width: 520px; height: 520px;
+  background: radial-gradient(circle, #c47a3c 0%, transparent 70%);
+  top: -120px; left: 40%;
+}
+.category__cover-glow--2 {
+  width: 380px; height: 380px;
+  background: radial-gradient(circle, #a8612b 0%, transparent 70%);
+  bottom: -80px; right: 18%;
+  animation-delay: 1.4s;
+}
+.category__cover-glow--3 {
+  width: 280px; height: 280px;
+  background: radial-gradient(circle, #d49058 0%, transparent 70%);
+  top: 35%; left: 12%;
+  animation-delay: 3s;
+}
+@keyframes brasaFlicker {
+  0%, 100% { opacity: 0.45; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.08); }
+}
+.category__cover-logo {
+  position: relative;
+  width: clamp(160px, 22vw, 280px);
+  height: auto;
+  opacity: 0.95;
+  filter: drop-shadow(0 30px 60px rgba(0,0,0,0.4));
+  z-index: 0;
+}
+.category__cover--logo .category__cover-content {
+  position: relative; z-index: 1;
 }
 
 /* ───────────────────────────────────────────────
@@ -2329,9 +2462,15 @@ button { font: inherit; background: none; border: none; color: inherit; }
    FOOTER
    ─────────────────────────────────────────────── */
 .footer {
-  background: #050505;
+  background: #1c1612;
+  color: #faf2e3;
   padding: 80px var(--pad-x) 32px;
-  border-top: 1px solid var(--c-line);
+  border-top: 1px solid rgba(245, 230, 205, 0.10);
+  --c-text: #faf2e3;
+  --c-text-soft: rgba(250, 242, 227, 0.84);
+  --c-text-mute: rgba(250, 242, 227, 0.60);
+  --c-line: rgba(245, 230, 205, 0.10);
+  --c-accent: #d49058;
 }
 .footer__grid {
   max-width: var(--container); margin: 0 auto;

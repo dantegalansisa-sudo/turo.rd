@@ -14,18 +14,19 @@ export default function ChefSection() {
         <div className="chef__media-col">
           <div className="chef__media" ref={ref}>
             <motion.div
-              className="chef__image-wrap"
+              className="chef__image-wrap chef__image-wrap--logo"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.05 }}
               transition={{ duration: 1, ease: EASINGS.premium }}
             >
               <motion.img
-                src="/assets/img/carne.png"
-                alt="Cortes premium asados al Josper en Turo"
-                style={{ y, scale: 1.05 }}
-                className="chef__image"
+                src="/assets/img/logo.png"
+                alt=""
+                style={{ y, scale: 1 }}
+                className="chef__image chef__image--logo"
               />
+              <span className="chef__image-soon">Foto del fuego — próximamente</span>
             </motion.div>
 
             <motion.div

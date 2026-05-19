@@ -36,7 +36,7 @@ export default function Footer() {
           <h4>Contacto</h4>
           <p><a href={SITE.whatsappLink} target="_blank" rel="noopener">WhatsApp · {SITE.phone}</a></p>
           <p><a href={SITE.instagram} target="_blank" rel="noopener">Instagram · {SITE.handle}</a></p>
-          <p><Link to="/reservaciones">Reservar mesa</Link></p>
+          <p><Link to="/reservations">Reservar mesa</Link></p>
           <p><Link to="/eventos">Experiencias & cenas privadas</Link></p>
         </div>
       </div>

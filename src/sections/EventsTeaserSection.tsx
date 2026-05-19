@@ -24,15 +24,18 @@ export default function EventsTeaserSection() {
         <div className="events__content">
           <span className="section__label">06 — Experiencias</span>
           <RevealText tag="h2" className="section__title section__title--white">
-            Veladas que
+            Las mejores noches
           </RevealText>
-          <RevealText tag="h2" className="section__title section__title--white section__title--italic" delay={0.15}>
-            se cuentan después.
+          <RevealText tag="h2" className="section__title section__title--white section__title--italic" delay={0.12}>
+            no se publican.
+          </RevealText>
+          <RevealText tag="h2" className="section__title section__title--white" delay={0.24}>
+            Se viven.
           </RevealText>
 
           <p className="events__lead">
-            Maridajes, cortes especiales y celebraciones privadas. Cada temporada,
-            Turo arma una experiencia que vale por sí sola.
+            Cenas de maridaje con bodegas invitadas, dry aged nights y celebraciones
+            privadas. Cada temporada armamos una experiencia que vale el viaje sola.
           </p>
 
           <motion.div

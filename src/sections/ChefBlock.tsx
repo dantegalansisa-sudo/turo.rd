@@ -30,10 +30,13 @@ export default function ChefBlock() {
         <div className="chef-block__content">
           <span className="chef-block__role">04 — La mano detrás de la brasa</span>
           <RevealText tag="h2" className="chef-block__name">
-            El Chef
+            El que cocina
           </RevealText>
           <RevealText tag="h2" className="chef-block__name chef-block__name--italic" delay={0.12}>
-            de Turo.
+            no aparece
+          </RevealText>
+          <RevealText tag="h2" className="chef-block__name" delay={0.24}>
+            en la foto.
           </RevealText>
 
           <motion.p
@@ -43,11 +46,9 @@ export default function ChefBlock() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8, delay: 0.3, ease: EASINGS.premium }}
           >
-            Detrás de cada corte hay una decisión: cuánto madurar, cuándo sacar de la
-            brasa, qué guarnición se siente honesta con el plato. El Chef Ejecutivo
-            de Turo trabaja con cortes USDA Prime y Black Angus seleccionados a mano,
-            respeta el producto y deja que el horno Josper haga lo suyo — sin trucos,
-            sin atajos.
+            Aparece en la mesa. En la decisión de cuánto madurar el ribeye. En el
+            instante exacto en que el T-bone sale del Josper. En el silencio que se
+            arma cuando llega la tabla y nadie se acuerda de hablar.
           </motion.p>
 
           <motion.p
@@ -57,9 +58,9 @@ export default function ChefBlock() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8, delay: 0.45, ease: EASINGS.premium }}
           >
-            Su filosofía es simple: producto premium, fuego limpio, tiempo justo. El
-            resultado se mide en silencio en la mesa — ahí donde la conversación se
-            corta para masticar.
+            El Chef Ejecutivo de Turo selecciona cada corte a mano, respeta el producto
+            y deja que el carbón haga lo suyo. Su trabajo se mide donde importa: en la
+            primera mordida, cuando la conversación se corta sola.
           </motion.p>
 
           <motion.div
@@ -69,7 +70,7 @@ export default function ChefBlock() {
             viewport={{ once: true, amount: 0.4 }}
             transition={{ duration: 1, delay: 0.7 }}
           >
-            “Tres ingredientes — y ninguno opcional.”
+            “Producto, fuego, tiempo — y nada que esconder.”
           </motion.div>
         </div>
       </div>
