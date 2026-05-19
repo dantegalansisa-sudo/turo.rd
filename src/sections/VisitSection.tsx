@@ -10,12 +10,12 @@ export default function VisitSection() {
   return (
     <section className="section section--visit" id="visitanos">
       <div className="visit__head">
-        <span className="section__label">06 — Visítanos</span>
+        <span className="section__label">07 — Visítanos</span>
         <RevealText tag="h2" className="section__title">
-          Te esperamos en
+          Reservá. Manejá.
         </RevealText>
         <RevealText tag="h2" className="section__title section__title--italic" delay={0.15}>
-          Santo Domingo.
+          Nos vemos en Piantini.
         </RevealText>
         <p className="section__lead">
           Calle Andrés Julio Aybar #25 — Piantini. Salón climatizado, terraza y valet parking.

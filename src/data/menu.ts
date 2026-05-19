@@ -25,14 +25,24 @@ export interface CategoryPage {
   sections: SubSection[];
 }
 
-const VIDEO = '/assets/videos/category.mp4';
+// Posters por categoría — usados en la portada de cada página de menú.
+// (Quitamos los videos del 787; ahora son imágenes con grain animado.)
+const COVERS = {
+  crudos: '/assets/img/food87.png',
+  josper: '/assets/img/carne.png',
+  pescados: '/assets/img/food55.png',
+  pastas: '/assets/img/food.png',
+  ensaladas: '/assets/img/food12.png',
+  brunch: '/assets/img/heros.jpg',
+} as const;
+const VIDEO = '';
 
 export const MENU: CategoryPage[] = [
   {
     slug: 'crudos-entradas',
     title: 'Crudos & Entradas',
     tagline: 'El abrebocas: frescura, brasa y producto que habla solo.',
-    coverVideo: VIDEO,
+    coverVideo: VIDEO, poster: COVERS.crudos,
     sections: [
       {
         id: 'crudos',
@@ -101,7 +111,7 @@ export const MENU: CategoryPage[] = [
     slug: 'josper-grill',
     title: 'Josper Grill',
     tagline: 'La brasa lo cambia todo. Carnes maduradas, fuego vivo, sello Turo.',
-    coverVideo: VIDEO,
+    coverVideo: VIDEO, poster: COVERS.josper,
     sections: [
       {
         id: 'carnes',
@@ -160,7 +170,7 @@ export const MENU: CategoryPage[] = [
     slug: 'pescados-mariscos',
     title: 'Pescados & Mariscos',
     tagline: 'Del mar al carbón — sin escala.',
-    coverVideo: VIDEO,
+    coverVideo: VIDEO, poster: COVERS.pescados,
     sections: [
       {
         id: 'pescados',
@@ -178,7 +188,7 @@ export const MENU: CategoryPage[] = [
     slug: 'pastas-arroces',
     title: 'Pastas & Arroces',
     tagline: 'Sustancia. Carbohidrato hecho bien.',
-    coverVideo: VIDEO,
+    coverVideo: VIDEO, poster: COVERS.pastas,
     sections: [
       {
         id: 'pastas',
@@ -197,7 +207,7 @@ export const MENU: CategoryPage[] = [
     slug: 'ensaladas-sopas',
     title: 'Ensaladas & Sopas',
     tagline: 'Verde, fresco, honesto — y cremas que abrazan.',
-    coverVideo: VIDEO,
+    coverVideo: VIDEO, poster: COVERS.ensaladas,
     sections: [
       {
         id: 'ensaladas',
@@ -227,7 +237,7 @@ export const MENU: CategoryPage[] = [
     slug: 'brunch',
     title: 'Turo Brunch',
     tagline: 'Sábados y domingos, 10am – 1pm. La mejor manera de empezar.',
-    coverVideo: VIDEO,
+    coverVideo: VIDEO, poster: COVERS.brunch,
     sections: [
       {
         id: 'pescados-brunch',

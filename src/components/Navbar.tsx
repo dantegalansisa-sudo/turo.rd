@@ -29,10 +29,7 @@ export default function Navbar() {
       <div className="navbar__inner">
         <Link to="/" className="navbar__brand brand-mark" aria-label="Inicio Turo Steakhouse">
           <span className="brand-mark__icon" aria-hidden="true">
-            <svg viewBox="0 0 32 32" fill="none">
-              <path d="M16 4c2 4 6 6 6 11 0 4-3 7-6 7s-6-3-6-7c0-5 4-7 6-11z" fill="currentColor"/>
-              <path d="M16 11c1 2 3 3 3 6 0 2-1.5 3.5-3 3.5S13 19 13 17c0-3 2-4 3-6z" fill="#1a1612" opacity="0.5"/>
-            </svg>
+            <img src="/assets/img/logo.png" alt="" />
           </span>
           <span className="brand-mark__word">TURO</span>
         </Link>

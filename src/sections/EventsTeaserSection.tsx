@@ -22,12 +22,12 @@ export default function EventsTeaserSection() {
 
       <div className="events__layout">
         <div className="events__content">
-          <span className="section__label">04 — Experiencias</span>
+          <span className="section__label">06 — Experiencias</span>
           <RevealText tag="h2" className="section__title section__title--white">
-            Cenas de autor
+            Veladas que
           </RevealText>
           <RevealText tag="h2" className="section__title section__title--white section__title--italic" delay={0.15}>
-            que se cuentan.
+            se cuentan después.
           </RevealText>
 
           <p className="events__lead">

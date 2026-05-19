@@ -43,7 +43,7 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.95, delay: 0.1, ease: EASINGS.premium }}
           >
-            <span className="hero2__word-accent">Brasa</span>, carne
+            Aquí la carne
           </motion.span>
           <motion.span
             className="hero2__title-line"
@@ -51,7 +51,7 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.95, delay: 0.3, ease: EASINGS.premium }}
           >
-            y la mesa
+            <span className="hero2__word-accent">se toma</span> en
           </motion.span>
           <motion.span
             className="hero2__title-line"
@@ -59,7 +59,7 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.95, delay: 0.5, ease: EASINGS.premium }}
           >
-            <span className="hero2__word-accent">perfecta.</span>
+            <span className="hero2__word-accent">serio.</span>
           </motion.span>
         </h1>
 
@@ -69,8 +69,8 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.85, ease: EASINGS.premium }}
         >
-          Cortes USDA Prime y Black Angus al horno Josper, raw bar y maridajes de autor.
-          Reservá tu mesa — el fuego ya está encendido.
+          Cortes USDA Prime y Black Angus al horno Josper, raw bar de producto fresco
+          y maridajes pensados con calma. El fuego ya está encendido — vení a sentarte.
         </motion.p>
 
         <motion.div

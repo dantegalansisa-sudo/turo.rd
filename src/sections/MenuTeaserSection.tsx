@@ -35,10 +35,10 @@ export default function MenuTeaserSection() {
         <div className="menu-teaser__head-left">
           <span className="section__label">02 — La Carta</span>
           <RevealText tag="h2" className="section__title">
-            Seis mundos.
+            Seis maneras de
           </RevealText>
           <RevealText tag="h2" className="section__title section__title--italic" delay={0.15}>
-            Una misma brasa.
+            entrar al fuego.
           </RevealText>
         </div>
         <div className="menu-teaser__head-right">

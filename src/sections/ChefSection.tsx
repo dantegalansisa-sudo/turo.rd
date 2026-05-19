@@ -54,15 +54,15 @@ export default function ChefSection() {
         </div>
 
         <div className="chef__content">
-          <span className="section__label">03 — Detrás del fuego</span>
+          <span className="section__label">03 — La filosofía</span>
           <RevealText tag="h2" className="section__title">
-            Carne premium,
+            Producto.
           </RevealText>
           <RevealText tag="h2" className="section__title section__title--italic" delay={0.15}>
-            brasa de carbón,
+            Fuego.
           </RevealText>
           <RevealText tag="h2" className="section__title" delay={0.3}>
-            mano firme.
+            Tiempo.
           </RevealText>
 
           <div className="chef__quote-block">

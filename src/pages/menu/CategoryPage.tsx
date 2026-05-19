@@ -7,13 +7,11 @@ import { containerVariants, cardVariants } from '../../utils/motionVariants';
 import { EASINGS } from '../../utils/easings';
 
 function DishCard({ dish }: { dish: Dish }) {
-  const img = dish.image ?? '/assets/img/carne.png';
-  const isPlaceholder = !dish.image;
-
   return (
-    <motion.article className="dish card" variants={cardVariants} whileHover={{ y: -6 }}>
-      <div className={`dish__media ${isPlaceholder ? 'dish__media--placeholder' : ''}`}>
-        <img src={img} alt={dish.name} loading="lazy" />
+    <motion.article className="dish card" variants={cardVariants} whileHover={{ y: -2 }}>
+      <div className="dish__media dish__media--logo">
+        <img src="/assets/img/logo.png" alt="" loading="lazy" />
+        <span className="dish__media-soon">Foto próximamente</span>
         {dish.tag === 'signature' && <span className="dish__tag">Signature</span>}
         {dish.tag === 'new' && <span className="dish__tag dish__tag--new">Nuevo</span>}
         {dish.tag === 'spicy' && <span className="dish__tag dish__tag--spicy">Picante</span>}
@@ -42,15 +40,16 @@ export default function CategoryPage() {
 
   return (
     <article className="category">
-      {/* Portada con video */}
+      {/* Portada con imagen + brasa animada */}
       <section className="category__cover">
         <motion.div className="category__video-wrap" style={{ scale: videoScale }}>
-          <video
+          <img
             className="category__video"
-            src={cat.coverVideo}
-            autoPlay loop muted playsInline preload="auto"
+            src={cat.poster ?? '/assets/img/heros.jpg'}
+            alt=""
           />
           <div className="category__video-overlay" />
+          <div className="category__cover-grain" aria-hidden="true" />
         </motion.div>
 
         <motion.div className="category__cover-content" style={{ y: titleY }}>
