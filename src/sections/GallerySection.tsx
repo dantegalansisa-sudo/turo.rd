@@ -4,14 +4,14 @@ import RevealText from '../components/RevealText';
 import { EASINGS } from '../utils/easings';
 
 const PHOTOS = [
-  { src: '/assets/img/espacio.png', label: 'Salón principal', title: 'Madera, cuero, brasa cercana.' },
-  { src: '/assets/img/espacio3.png', label: 'Mesa de noche', title: 'Mantel blanco, copa servida.' },
-  { src: '/assets/img/espacio4.png', label: 'Terraza', title: 'Luz cálida bajo la palma.' },
-  { src: '/assets/img/espacio5.png', label: 'Barra', title: 'El bar — donde empieza la mesa.' },
-  { src: '/assets/img/espacio6.png', label: 'Detalle', title: 'Cuidado en cada esquina.' },
-  { src: '/assets/img/espacio23.png', label: 'Salón privado', title: 'Para tu velada — solo tuya.' },
-  { src: '/assets/img/espacio45.png', label: 'Cava', title: 'La cava — vinos del mundo.' },
-  { src: '/assets/img/espacio1.png', label: 'Entrada', title: 'Bienvenido a Turo.' },
+  { src: '/assets/img/espacio.png' },
+  { src: '/assets/img/espacio3.png' },
+  { src: '/assets/img/espacio4.png' },
+  { src: '/assets/img/espacio5.png' },
+  { src: '/assets/img/espacio6.png' },
+  { src: '/assets/img/espacio23.png' },
+  { src: '/assets/img/espacio45.png' },
+  { src: '/assets/img/espacio1.png' },
 ];
 
 export default function GallerySection() {
@@ -61,11 +61,7 @@ export default function GallerySection() {
               exit={{ opacity: 0, x: direction === 1 ? -40 : 40, scale: 1.02 }}
               transition={{ duration: 0.7, ease: EASINGS.premium }}
             >
-              <img src={current.src} alt={current.label} loading="lazy" />
-              <div className="gallery-slider__caption">
-                <span className="gallery-slider__caption-label">{current.label}</span>
-                <div className="gallery-slider__caption-title">{current.title}</div>
-              </div>
+              <img src={current.src} alt="" loading="lazy" />
             </motion.div>
           </AnimatePresence>
         </div>
