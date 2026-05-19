@@ -497,10 +497,10 @@ button { font: inherit; background: none; border: none; color: inherit; }
   font-family: 'Fraunces', serif;
   font-variation-settings: "opsz" 144;
   font-weight: 600;
-  font-size: clamp(36px, 5.5vw, 64px);
-  line-height: 1.02;
-  letter-spacing: -0.02em;
-  margin-bottom: 24px;
+  font-size: clamp(48px, 7.4vw, 96px);
+  line-height: 0.96;
+  letter-spacing: -0.028em;
+  margin-bottom: 18px;
 }
 .chef-block__name em,
 .chef-block__name--italic {
@@ -721,9 +721,9 @@ button { font: inherit; background: none; border: none; color: inherit; }
   font-family: 'Fraunces', serif;
   font-variation-settings: "opsz" 144;
   font-weight: 600;
-  font-size: clamp(32px, 4.6vw, 52px);
-  line-height: 1.04;
-  letter-spacing: -0.02em;
+  font-size: clamp(42px, 6vw, 76px);
+  line-height: 0.98;
+  letter-spacing: -0.026em;
 }
 .rsv-step__title em {
   font-style: italic;
@@ -1295,9 +1295,9 @@ button { font: inherit; background: none; border: none; color: inherit; }
   font-family: 'Fraunces', serif;
   font-variation-settings: "opsz" 144, "SOFT" 100;
   font-weight: 700;
-  font-size: clamp(40px, 5.6vw, 92px);
-  line-height: 0.96;
-  letter-spacing: -0.022em;
+  font-size: clamp(54px, 7.6vw, 128px);
+  line-height: 0.94;
+  letter-spacing: -0.028em;
   color: #f6efe1;
   margin: 0 0 22px;
   display: flex; flex-direction: column;
@@ -1466,8 +1466,8 @@ button { font: inherit; background: none; border: none; color: inherit; }
 }
 .section__title {
   font-family: var(--f-display); font-weight: 500;
-  font-size: clamp(36px, 6vw, 72px); line-height: 1.02;
-  letter-spacing: -0.02em;
+  font-size: clamp(48px, 8.2vw, 108px); line-height: 0.98;
+  letter-spacing: -0.025em;
 }
 .section__title--italic { font-style: italic; color: var(--c-accent); font-weight: 400; }
 .section__title--center { text-align: center; display: block; }
@@ -2195,7 +2195,7 @@ button { font: inherit; background: none; border: none; color: inherit; }
 }
 .page__title {
   font-family: var(--f-display); font-weight: 500;
-  font-size: clamp(48px, 8vw, 96px); line-height: 0.98; letter-spacing: -0.02em;
+  font-size: clamp(60px, 10vw, 140px); line-height: 0.94; letter-spacing: -0.028em;
 }
 .page__title--italic { font-style: italic; color: var(--c-accent); font-weight: 400; }
 .page__title--white { color: #fff; }
@@ -2262,8 +2262,8 @@ button { font: inherit; background: none; border: none; color: inherit; }
 .category__breadcrumb a { color: var(--c-accent); }
 .category__title {
   font-family: var(--f-display); font-weight: 500;
-  font-size: clamp(56px, 10vw, 140px); line-height: 0.95;
-  letter-spacing: -0.025em; color: #fff;
+  font-size: clamp(72px, 12vw, 180px); line-height: 0.92;
+  letter-spacing: -0.032em; color: #fff;
 }
 .category__tagline {
   font-family: var(--f-display); font-style: italic;
@@ -2286,7 +2286,7 @@ button { font: inherit; background: none; border: none; color: inherit; }
 .menu-section__head { margin-bottom: 40px; }
 .menu-section__title {
   font-family: var(--f-display); font-weight: 500;
-  font-size: clamp(28px, 4vw, 48px); letter-spacing: -0.01em;
+  font-size: clamp(36px, 5.4vw, 68px); letter-spacing: -0.02em;
 }
 .menu-section__title::before {
   content: ''; display: inline-block;
